@@ -1,0 +1,19 @@
+remote_theme: ISSAE/architect
+
+name: Programmation Avancée TP6
+
+author: Pascal Fares
+
+author_email: pascal.fares@isae.edu.lb
+
+title: Simulation transaction commit, Temlate, Visteur, Composite 
+description: Simulation transaction commit, Temlate, Visteur, Composite
+
+google_analytics: UA-29708002-2
+
+repository: ISSAE/nfp121.tp6
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
