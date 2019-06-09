@@ -7,12 +7,12 @@ import question1.Visiteur;
 public class DebitMaximal implements Visiteur<Integer>{
 
   public Integer visite(Contributeur c){
-    return 0; // a compléter
+    return 0; // a complÃ©ter
   }
   
   public Integer visite(GroupeDeContributeurs g){
     int res = 0;
-    // a compléter
+    // a complÃ©ter
     return res ;
   }
 }

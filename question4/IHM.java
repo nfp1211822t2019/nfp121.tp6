@@ -16,8 +16,8 @@ import java.io.ByteArrayOutputStream;
 public class IHM extends JFrame {
 
     private JTextArea resultat = new JTextArea("", 7,60);
-    private JButton debiter = new JButton("débiter");
-    private JButton crediter = new JButton("créditer");
+    private JButton debiter = new JButton("dÃ©biter");
+    private JButton crediter = new JButton("crÃ©diter");
     private JTextField somme = new JTextField(4);
 
     private GroupeDeContributeurs g;

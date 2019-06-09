@@ -50,7 +50,7 @@ public class GroupeDeContributeurs extends Cotisant implements Iterable<Cotisant
     return solde;
   }
   
-  // méthodes fournies
+  // mÃ©thodes fournies
   
  public Iterator<Cotisant> iterator(){
     return new GroupeIterator(liste.iterator());

@@ -31,7 +31,7 @@ public class Main {
         }
     }
 
-    /** Retourne dans une String, un arbre en XML, utilisée en question4. */
+    /** Retourne dans une String, un arbre en XML, utilisÃ©e en question4. */
     public static String arbreXML(Cotisant c) throws Exception{
         ByteArrayOutputStream baos = null;
         String result = new String();

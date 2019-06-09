@@ -21,19 +21,19 @@ public class Contributeur extends Cotisant{
 	}
 	
 	/**
-	 * throws RuntimeException new RuntimeException("nombre négatif !!!");
+	 * throws RuntimeException new RuntimeException("nombre nÃ©gatif !!!");
 	 */
   public  void credit(int somme){
 	  // a completer
 	}
 	
 	/**
-	 * throws RuntimeException new RuntimeException("nombre négatif !!!");
+	 * throws RuntimeException new RuntimeException("nombre nÃ©gatif !!!");
 	 */
   public void affecterSolde(int somme){
-    // if(somme <0) throw new RuntimeException("nombre négatif !!!");
+    // if(somme <0) throw new RuntimeException("nombre nÃ©gatif !!!");
     try{
-      debit(solde()); credit(somme);// mode élégant ... 
+      debit(solde()); credit(somme);// mode Ã©lÃ©gant ... 
     }catch(SoldeDebiteurException sde){ 
       // exception peu probable
       this.solde = somme; // mode efficace ...

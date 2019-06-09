@@ -5,10 +5,10 @@
     <div id="container">
         <div id="header">
             <div id="header_toprow">
-                Conservatoire national des arts et métiers
+                Conservatoire national des arts et mÃ©tiers
             </div>
             <div id="header_title">
-                NFP121 : Programmation avancée<br>
+                NFP121 : Programmation avancÃ©e<br>
                 TP <span style="font-weight: 400;"><i>commit</i></span> - Les transactions
             </div>
         </div>
@@ -20,7 +20,7 @@
             </div>
 
             <div class="paragraphe">
-				<b>Préambule:</b> le patron Composite en UML
+				<b>PrÃ©ambule:</b> le patron Composite en UML
             </div>
             <p align="center">
                 <img class="win_screenshot" src="images/composite.jpg" height="325" width="449">
@@ -33,13 +33,13 @@
 			
             <div class="paragraphe">&nbsp;&nbsp;&nbsp;
 La structuration et la gestion de cotisants utilisent le patron
-Composite. Un contributeur est un cotisant, celui-ci possède les
-méthodes de débit et de crédit. Un groupe de contributeurs possède les
-mêmes méthodes de débit et crédit qui opèrent sur tous les
+Composite. Un contributeur est un cotisant, celui-ci possÃ¨de les
+mÃ©thodes de dÃ©bit et de crÃ©dit. Un groupe de contributeurs possÃ¨de les
+mÃªmes mÃ©thodes de dÃ©bit et crÃ©dit qui opÃ¨rent sur tous les
 contributeurs de ce groupe. </div>
             <br>
             <div class="paragraphe">&nbsp;&nbsp;&nbsp;
-Le composite ci-dessous reflète la gestion des cotisants,
+Le composite ci-dessous reflÃ¨te la gestion des cotisants,
 l&#8217;architecture retenue des classes pour cette question est la suivante
 (en notation BlueJ/UML) : </div>
 			
@@ -48,7 +48,7 @@ l&#8217;architecture retenue des classes pour cette question est la suivante
             </p>
 			
             <div class="paragraphe">
-				La classe abstraite <b>Cotisant</b> contient les méthodes suivantes :
+				La classe abstraite <b>Cotisant</b> contient les mÃ©thodes suivantes :
             </div>
             <br>
 
@@ -80,8 +80,8 @@ l&#8217;architecture retenue des classes pour cette question est la suivante
 
             <div class="paragraphe">
                 <ul>
-                    <li>La somme en paramètre des méthodes <b><i>credit</i></b> et <b><i>debit</i></b> ne peut-être que positive ou nulle, une exception de type <i><b>RuntimeException</b></i> doit être levée si celle-ci est négative.</li>
-                    <li>Si un contributeur ne peut être débité de la somme souhaitée, une exception de type <i><b>SoldeDebiteurException</b></i> doit être levée.</li>
+                    <li>La somme en paramÃ¨tre des mÃ©thodes <b><i>credit</i></b> et <b><i>debit</i></b> ne peut-Ãªtre que positive ou nulle, une exception de type <i><b>RuntimeException</b></i> doit Ãªtre levÃ©e si celle-ci est nÃ©gative.</li>
+                    <li>Si un contributeur ne peut Ãªtre dÃ©bitÃ© de la somme souhaitÃ©e, une exception de type <i><b>SoldeDebiteurException</b></i> doit Ãªtre levÃ©e.</li>
                 </ul>
 				<br>
 				Ci-dessous un extrait de la classe de tests unitaires.
@@ -91,21 +91,21 @@ l&#8217;architecture retenue des classes pour cette question est la suivante
 				<code>
 					<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>try</b></font><font color="#000000">{</font><br>
 					<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">Cotisant&nbsp;c&nbsp;=&nbsp;</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">Contributeur</font><font color="#000000">(</font><font color="#2a00ff">"a"</font><font color="#000000">,-</font><font color="#990000">100</font><font color="#000000">)</font><font color="#000000">;</font><br>
-					<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">fail</font><font color="#000000">(</font><font color="#2a00ff">"la&nbsp;somme&nbsp;allouée&nbsp;lors&nbsp;de&nbsp;la&nbsp;création&nbsp;ne&nbsp;peut&nbsp;être&nbsp;négative&nbsp;???"</font><font color="#000000">)</font><font color="#000000">;</font><br>
+					<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">fail</font><font color="#000000">(</font><font color="#2a00ff">"la&nbsp;somme&nbsp;allouÃ©e&nbsp;lors&nbsp;de&nbsp;la&nbsp;crÃ©ation&nbsp;ne&nbsp;peut&nbsp;Ãªtre&nbsp;nÃ©gative&nbsp;???"</font><font color="#000000">)</font><font color="#000000">;</font><br>
 					<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><font color="#7f0055"><b>catch</b></font><font color="#000000">(</font><font color="#000000">Exception&nbsp;e</font><font color="#000000">){</font><br>
 					<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br>
 					<font color="#ffffff"></font><br>
 					<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">Contributeur&nbsp;c&nbsp;=&nbsp;</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">Contributeur</font><font color="#000000">(</font><font color="#2a00ff">"a"</font><font color="#000000">,</font><font color="#990000">100</font><font color="#000000">)</font><font color="#000000">;</font><br>
-					<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">assertTrue</font><font color="#000000">(</font><font color="#2a00ff">"&nbsp;solde&nbsp;erroné&nbsp;???&nbsp;"</font><font color="#000000">,&nbsp;c.solde</font><font color="#000000">()</font><font color="#000000">==</font><font color="#990000">100</font><font color="#000000">)</font><font color="#000000">;</font><br>
+					<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">assertTrue</font><font color="#000000">(</font><font color="#2a00ff">"&nbsp;solde&nbsp;erronÃ©&nbsp;???&nbsp;"</font><font color="#000000">,&nbsp;c.solde</font><font color="#000000">()</font><font color="#000000">==</font><font color="#990000">100</font><font color="#000000">)</font><font color="#000000">;</font><br>
 					<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>final&nbsp;</b></font><font color="#7f0055"><b>int&nbsp;</b></font><font color="#000000">val&nbsp;=&nbsp;</font><font color="#990000">30</font><font color="#000000">;</font><br>
 					<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>try</b></font><font color="#000000">{</font><br>
 					<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">c.debit</font><font color="#000000">(</font><font color="#000000">val</font><font color="#000000">)</font><font color="#000000">;</font><br>
 					<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><font color="#7f0055"><b>catch</b></font><font color="#000000">(</font><font color="#000000">Exception&nbsp;e</font><font color="#000000">){</font><br>
 					<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">fail</font><font color="#000000">(</font><font color="#2a00ff">"&nbsp;aucune&nbsp;exception&nbsp;n'est&nbsp;attendue&nbsp;ici&nbsp;!"</font><font color="#000000">)</font><font color="#000000">;</font><br>
 					<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}&nbsp;&nbsp;</font><br>
-					<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">assertTrue</font><font color="#000000">(</font><font color="#2a00ff">"&nbsp;débit&nbsp;inopérant&nbsp;???&nbsp;"</font><font color="#000000">,&nbsp;c.solde</font><font color="#000000">()</font><font color="#000000">==</font><font color="#990000">100</font><font color="#000000">-val</font><font color="#000000">)</font><font color="#000000">;</font><br>
+					<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">assertTrue</font><font color="#000000">(</font><font color="#2a00ff">"&nbsp;dÃ©bit&nbsp;inopÃ©rant&nbsp;???&nbsp;"</font><font color="#000000">,&nbsp;c.solde</font><font color="#000000">()</font><font color="#000000">==</font><font color="#990000">100</font><font color="#000000">-val</font><font color="#000000">)</font><font color="#000000">;</font><br>
 					<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">c.credit</font><font color="#000000">(</font><font color="#000000">val</font><font color="#000000">)</font><font color="#000000">;</font><br>
-					<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">assertTrue</font><font color="#000000">(</font><font color="#2a00ff">"&nbsp;crédit&nbsp;inopérant???&nbsp;"</font><font color="#000000">,&nbsp;c.solde</font><font color="#000000">()</font><font color="#000000">==</font><font color="#990000">100</font><font color="#000000">)</font><font color="#000000">;</font><br>
+					<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">assertTrue</font><font color="#000000">(</font><font color="#2a00ff">"&nbsp;crÃ©dit&nbsp;inopÃ©rant???&nbsp;"</font><font color="#000000">,&nbsp;c.solde</font><font color="#000000">()</font><font color="#000000">==</font><font color="#990000">100</font><font color="#000000">)</font><font color="#000000">;</font><br>
 					<font color="#ffffff"></font><br>
 					<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>try</b></font><font color="#000000">{</font><br>
 					<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">c.debit</font><font color="#000000">(</font><font color="#990000">300</font><font color="#000000">)</font><font color="#000000">;</font><br>
@@ -120,13 +120,13 @@ l&#8217;architecture retenue des classes pour cette question est la suivante
 					<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">g.ajouter</font><font color="#000000">(</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">Contributeur</font><font color="#000000">(</font><font color="#2a00ff">"c"</font><font color="#000000">,</font><font color="#990000">150</font><font color="#000000">))</font><font color="#000000">;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><br>
 					<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">assertEquals</font><font color="#000000">(</font><font color="#2a00ff">"&nbsp;nombre&nbsp;de&nbsp;Contributeurs&nbsp;???&nbsp;"</font><font color="#000000">,&nbsp;</font><font color="#990000">3</font><font color="#000000">,&nbsp;g.nombreDeCotisants</font><font color="#000000">())</font><font color="#000000">;</font><br>
 					<font color="#ffffff"></font><br>
-					<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">assertEquals</font><font color="#000000">(</font><font color="#2a00ff">"&nbsp;solde&nbsp;erroné&nbsp;???&nbsp;"</font><font color="#000000">,&nbsp;</font><font color="#990000">300</font><font color="#000000">,&nbsp;g.solde</font><font color="#000000">())</font><font color="#000000">;</font><br>
-					<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">assertEquals</font><font color="#000000">(</font><font color="#2a00ff">"&nbsp;solde&nbsp;erroné&nbsp;???&nbsp;"</font><font color="#000000">,&nbsp;</font><font color="#990000">30</font><font color="#000000">,&nbsp;val</font><font color="#000000">)</font><font color="#000000">;</font><br>
+					<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">assertEquals</font><font color="#000000">(</font><font color="#2a00ff">"&nbsp;solde&nbsp;erronÃ©&nbsp;???&nbsp;"</font><font color="#000000">,&nbsp;</font><font color="#990000">300</font><font color="#000000">,&nbsp;g.solde</font><font color="#000000">())</font><font color="#000000">;</font><br>
+					<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">assertEquals</font><font color="#000000">(</font><font color="#2a00ff">"&nbsp;solde&nbsp;erronÃ©&nbsp;???&nbsp;"</font><font color="#000000">,&nbsp;</font><font color="#990000">30</font><font color="#000000">,&nbsp;val</font><font color="#000000">)</font><font color="#000000">;</font><br>
 					<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>try</b></font><font color="#000000">{</font><br>
 					<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">g.debit</font><font color="#000000">(</font><font color="#990000">10</font><font color="#000000">)</font><font color="#000000">;</font><br>
 					<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><font color="#7f0055"><b>catch</b></font><font color="#000000">(</font><font color="#000000">Exception&nbsp;e</font><font color="#000000">){&nbsp;</font><font color="#000000">fail</font><font color="#000000">()</font><font color="#000000">;</font><font color="#000000">}</font><br>
-					<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">assertEquals</font><font color="#000000">(</font><font color="#2a00ff">"&nbsp;débit&nbsp;inopérant&nbsp;???&nbsp;"</font><font color="#000000">,&nbsp;</font><font color="#990000">300</font><font color="#000000">-</font><font color="#000000">(</font><font color="#000000">g.nombreDeCotisants</font><font color="#000000">()</font><font color="#000000">*</font><font color="#990000">10</font><font color="#000000">)</font><font color="#000000">,&nbsp;g.solde</font><font color="#000000">())</font><font color="#000000">;</font><br>
-					<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">assertEquals</font><font color="#000000">(</font><font color="#2a00ff">"&nbsp;solde&nbsp;erroné&nbsp;???&nbsp;"</font><font color="#000000">,&nbsp;</font><font color="#990000">270</font><font color="#000000">,&nbsp;g.solde</font><font color="#000000">())</font><font color="#000000">;</font><br>
+					<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">assertEquals</font><font color="#000000">(</font><font color="#2a00ff">"&nbsp;dÃ©bit&nbsp;inopÃ©rant&nbsp;???&nbsp;"</font><font color="#000000">,&nbsp;</font><font color="#990000">300</font><font color="#000000">-</font><font color="#000000">(</font><font color="#000000">g.nombreDeCotisants</font><font color="#000000">()</font><font color="#000000">*</font><font color="#990000">10</font><font color="#000000">)</font><font color="#000000">,&nbsp;g.solde</font><font color="#000000">())</font><font color="#000000">;</font><br>
+					<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">assertEquals</font><font color="#000000">(</font><font color="#2a00ff">"&nbsp;solde&nbsp;erronÃ©&nbsp;???&nbsp;"</font><font color="#000000">,&nbsp;</font><font color="#990000">270</font><font color="#000000">,&nbsp;g.solde</font><font color="#000000">())</font><font color="#000000">;</font><br>
 					<font color="#ffffff"></font><br>
 					<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>try</b></font><font color="#000000">{</font><br>
 					<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">g.debit</font><font color="#000000">(</font><font color="#990000">60</font><font color="#000000">)</font><font color="#000000">;</font><br>
@@ -134,13 +134,13 @@ l&#8217;architecture retenue des classes pour cette question est la suivante
 					<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><font color="#7f0055"><b>catch</b></font><font color="#000000">(</font><font color="#000000">Exception&nbsp;e</font><font color="#000000">){</font><br>
 					<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">assertTrue</font><font color="#000000">(</font><font color="#2a00ff">"&nbsp;SoldeDebiteurException&nbsp;est&nbsp;attendue&nbsp;???"</font><font color="#000000">,&nbsp;e&nbsp;</font><font color="#7f0055"><b>instanceof&nbsp;</b></font><font color="#000000">SoldeDebiteurException</font><font color="#000000">)</font><font color="#000000">;</font><br>
 					<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br>
-					<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">assertEquals</font><font color="#000000">(</font><font color="#2a00ff">"&nbsp;solde&nbsp;erroné&nbsp;???&nbsp;"</font><font color="#000000">,&nbsp;</font><font color="#990000">210</font><font color="#000000">,&nbsp;g.solde</font><font color="#000000">())</font><font color="#000000">;</font><br>
+					<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">assertEquals</font><font color="#000000">(</font><font color="#2a00ff">"&nbsp;solde&nbsp;erronÃ©&nbsp;???&nbsp;"</font><font color="#000000">,&nbsp;</font><font color="#990000">210</font><font color="#000000">,&nbsp;g.solde</font><font color="#000000">())</font><font color="#000000">;</font><br>
 					<b><font color="#ff0000" size="4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font color="#ff0000" size="4">//&nbsp;ici&nbsp;le&nbsp;solde&nbsp;du&nbsp;groupe&nbsp;(g)&nbsp;est&nbsp;de&nbsp;210,<br>
-&nbsp; &nbsp; &nbsp; // ce&nbsp;qui&nbsp;est&nbsp;une&nbsp;erreur&nbsp;de&nbsp;débit&nbsp;d&#8217;un&nbsp;groupe,<br>
+&nbsp; &nbsp; &nbsp; // ce&nbsp;qui&nbsp;est&nbsp;une&nbsp;erreur&nbsp;de&nbsp;dÃ©bit&nbsp;d&#8217;un&nbsp;groupe,<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-//&nbsp;le&nbsp;contributeur&nbsp;(a)&nbsp;a&nbsp;été&nbsp;débité&nbsp;de&nbsp;60
-et&nbsp;l&#8217;opération&nbsp;a&nbsp;échouée&nbsp;pour&nbsp;(b)!<br>
-					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //&nbsp;&nbsp;&nbsp;&nbsp;<u>une&nbsp;transaction&nbsp;lors&nbsp;d&#8217;un&nbsp;débit&nbsp;sera&nbsp;demandée&nbsp;en&nbsp;question3</u></font></b><br>
+//&nbsp;le&nbsp;contributeur&nbsp;(a)&nbsp;a&nbsp;Ã©tÃ©&nbsp;dÃ©bitÃ©&nbsp;de&nbsp;60
+et&nbsp;l&#8217;opÃ©ration&nbsp;a&nbsp;Ã©chouÃ©e&nbsp;pour&nbsp;(b)!<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //&nbsp;&nbsp;&nbsp;&nbsp;<u>une&nbsp;transaction&nbsp;lors&nbsp;d&#8217;un&nbsp;dÃ©bit&nbsp;sera&nbsp;demandÃ©e&nbsp;en&nbsp;question3</u></font></b><br>
 					<font color="#ffffff"></font><br>
 					<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">g&nbsp;=&nbsp;</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">GroupeDeContributeurs</font><font color="#000000">(</font><font color="#2a00ff">"g"</font><font color="#000000">)</font><font color="#000000">;</font><br>
 					<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">g.ajouter</font><font color="#000000">(</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">Contributeur</font><font color="#000000">(</font><font color="#2a00ff">"g_a"</font><font color="#000000">,</font><font color="#990000">100</font><font color="#000000">))</font><font color="#000000">;</font><br>
@@ -173,7 +173,7 @@ et&nbsp;l&#8217;opération&nbsp;a&nbsp;échouée&nbsp;pour&nbsp;(b)!<br>
             </div>
 
             <div class="paragraphe">
-				Écrire une implémentation complète de la classe <b><i>Contributeur</i></b>.
+				Ã‰crire une implÃ©mentation complÃ¨te de la classe <b><i>Contributeur</i></b>.
             </div>
 
             <div class="question">
@@ -182,15 +182,15 @@ et&nbsp;l&#8217;opération&nbsp;a&nbsp;échouée&nbsp;pour&nbsp;(b)!<br>
             </div>
 
             <div class="paragraphe">
-				Écrire une implémentation <b>complète de la classe <i>GroupeDeContributeurs</i></b>. La méthode <b> <i>iterator()</i></b> est fournie.
+				Ã‰crire une implÃ©mentation <b>complÃ¨te de la classe <i>GroupeDeContributeurs</i></b>. La mÃ©thode <b> <i>iterator()</i></b> est fournie.
 				<br>
 				<br>
 			</div>
 
             <div class="notes">
-				Notez à nouveau que le débit d&#8217;un groupe de contributeurs à cette question 
-                n&#8217;est pas correctement implémenté, la notion de transaction, 
-                d'atomicité pour cette opération,&nbsp; indispensable, vous sera demandée en question 3.
+				Notez Ã  nouveau que le dÃ©bit d&#8217;un groupe de contributeurs Ã  cette question 
+                n&#8217;est pas correctement implÃ©mentÃ©, la notion de transaction, 
+                d'atomicitÃ© pour cette opÃ©ration,&nbsp; indispensable, vous sera demandÃ©e en question 3.
 			</div>
 			
 			<br>
@@ -205,19 +205,19 @@ et&nbsp;l&#8217;opération&nbsp;a&nbsp;échouée&nbsp;pour&nbsp;(b)!<br>
 
             <div class="paragraphe">
 Le patron visiteur permet de parcourir une structure composite et
-d&#8217;exécuter une opération particulière en fonction du n&#339;ud visité. <br>
+d&#8217;exÃ©cuter une opÃ©ration particuliÃ¨re en fonction du n&#339;ud visitÃ©. <br>
 &nbsp;</div>
 			
             <div class="paragraphe">
-				A cette question trois visiteurs sont demandés:				
+				A cette question trois visiteurs sont demandÃ©s:				
                 <ul>
-                    <li>Le visiteur <b>DebitMaximal</b> permet d&#8217;obtenir la valeur maximale que l&#8217;on peut débiter d&#8217;un cotisant (un contributeur isolé ou un groupe de contributeurs).</li>
-                    <li>Le visiteur <b>SansDoublon</b> vérifie qu'il n'y a pas 
-                    deux contributeurs ou groupe au même nom.</li>
+                    <li>Le visiteur <b>DebitMaximal</b> permet d&#8217;obtenir la valeur maximale que l&#8217;on peut dÃ©biter d&#8217;un cotisant (un contributeur isolÃ© ou un groupe de contributeurs).</li>
+                    <li>Le visiteur <b>SansDoublon</b> vÃ©rifie qu'il n'y a pas 
+                    deux contributeurs ou groupe au mÃªme nom.</li>
                     <li>Le visiteur <b>CompositeValide</b> permet de valider une instance du composite.</li>
                     <li>Le visiteur <b>VisiteurToXML est fourni</b> et engendre un arbre XML.</li>
                 </ul>
-				Soit l&#8217;interface générique Visiteur :
+				Soit l&#8217;interface gÃ©nÃ©rique Visiteur :
 			</div>
 
             <div class="codesource">
@@ -237,9 +237,9 @@ d&#8217;exécuter une opération particulière en fonction du n&#339;ud visité. <br
             </div>
 			
             <div class="paragraphe">
-				Écrire une implémentation complète de la classe <b><i>CompositeValide</i></b>. Le solde de chaque contributeur doit être supérieur ou égal à 0 et il n&#8217;existe pas de groupe n&#8217;ayant pas de contributeurs.
-			    <p>Le visiteur <i><b>SansDoublon</b></i> vérifie que les noms des 
-                groupes et des contributeurs sont différents.
+				Ã‰crire une implÃ©mentation complÃ¨te de la classe <b><i>CompositeValide</i></b>. Le solde de chaque contributeur doit Ãªtre supÃ©rieur ou Ã©gal Ã  0 et il n&#8217;existe pas de groupe n&#8217;ayant pas de contributeurs.
+			    <p>Le visiteur#8217;existe pas de groupe n&#8217;ayant pas de contributeurs.
+			    <p>Le visiteurcontributeurs sont diffÃ©rents.
 			</p></div>
  
             <div class="question">
@@ -248,19 +248,19 @@ d&#8217;exécuter une opération particulière en fonction du n&#339;ud visité. <br
             </div>
 
             <div class="paragraphe">
-				Écrire une implémentation complète de la classe <b><i>DebitMaximal</i></b>.
+				Ã‰crire une implÃ©mentation complÃ¨te de la classe <b><i>DebitMaximal</i></b>.
 			</div>
 			<br>
             <div class="notes">
-Notez que ce visiteur représente une « solution » à l&#8217;erreur de débit
-sur un groupe de contributeurs mentionnée en question 1. Avant chaque
-opération de débit l&#8217;utilisateur doit (devrait) vérifier la valeur de
-débit maximale possible à l'aide de ce visiteur (cf. la méthode main
-ci-dessous), cependant la notion de transaction demandée à la question
-3 sera préférée. </div>
+Notez que ce visiteur reprÃ©sente une Â« solution Â» Ã  l&#8217;erreur de dÃ©bit
+sur un groupe de contributeurs mentionnÃ©e en question 1. Avant chaque
+opÃ©ration de dÃ©bit l&#8217;utilisateur doit (devrait) vÃ©rifier la valeur de
+dÃ©bit maximale possible Ã  l'aide de ce visiteur (cf. la mÃ©thode main
+ci-dessous), cependant la notion de transaction demandÃ©e Ã  la question
+3 sera prÃ©fÃ©rÃ©e. </div>
 			<br>
             <div class="paragraphe">
-				L&#8217;exécution de la méthode Main.main(), ci-dessous a permis d'afficher deux arbres XML.
+				L&#8217;exÃ©cution de la mÃ©thode Main.main(), ci-dessous a permis d'afficher deux arbres XML.
 			</div>
  
             <div class="codesource">
@@ -311,7 +311,7 @@ ci-dessous), cependant la notion de transaction demandée à la question
 			</div>
 			
             <div class="paragraphe">
-				La sortie sur la console résultant de l'exécution de la méthode Main.main :			
+				La sortie sur la console rÃ©sultant de l'exÃ©cution de la mÃ©thode Main.main :			
 			</div>
 			
             <div class="codesource">
@@ -347,7 +347,7 @@ ci-dessous), cependant la notion de transaction demandée à la question
             </div>
 
             <div class="paragraphe">
-				Complétez la classe de tests unitaires TestsDesVisiteurs pour 
+				ComplÃ©tez la classe de tests unitaires TestsDesVisiteurs pour 
                 les 3 visiteurs CompositeValide, SansDoublon et DebitMaximal .
 			</div>
 			<br>
@@ -359,7 +359,7 @@ ci-dessous), cependant la notion de transaction demandée à la question
             </div>
 			
             <div class="paragraphe">
-				<span style="font-weight: bold;">Préambule</span>: le patron Template Method en UML
+				<span style="font-weight: bold;">PrÃ©ambule</span>: le patron Template Method en UML
 			</div>
 			
             <p align="center">
@@ -367,15 +367,15 @@ ci-dessous), cependant la notion de transaction demandée à la question
             </p>
  
             <div class="paragraphe">
-L'opération de débit sur un groupe de contributeurs en question 1
+L'opÃ©ration de dÃ©bit sur un groupe de contributeurs en question 1
 engendre dans certains cas une erreur: il suffit que l'un des
-contributeurs ne possède pas la somme à débiter pour qu'une exception
-soit levée, ainsi les sommes débitées de certains contributeurs ne sont
-pas restituées. </div>
+contributeurs ne possÃ¨de pas la somme Ã  dÃ©biter pour qu'une exception
+soit levÃ©e, ainsi les sommes dÃ©bitÃ©es de certains contributeurs ne sont
+pas restituÃ©es. </div>
 			<br>
-            <div class="paragraphe"> L'opération
-de débit sur un groupe de contributeurs doit être atomique et effectuée
-au sein d'une transaction, la classe abstraite <b><i>AbstractTransaction</i></b> reflète cette notion et utilise le patron <i><b>Template Method</b></i>. Les opérations <i><b>beginTransaction</b></i>, <i><b>endTransaction</b></i> et <i><b>rollbackTransaction</b></i> sont laissées à la responsabilité des sous classes.
+            <div class="paragraphe"> L'opÃ©ration
+de dÃ©bit sur un groupe de contributeurs doit Ãªtre atomique et effectuÃ©e
+au sein d'une transaction, la classe abstraite <b><i>AbstractTransaction</i></b> reflÃ¨te cette notion et utilise le patron <i><b>Template Method</b></i>. Les opÃ©rations <i><b>beginTransaction</b></i>, <i><b>endTransaction</b></i> et <i><b>rollbackTransaction</b></i> sont laissÃ©es Ã  la responsabilitÃ© des sous classes.
 			</div>
  
             <div class="codesource">
@@ -420,7 +420,7 @@ au sein d'une transaction, la classe abstraite <b><i>AbstractTransaction</i></b>
 					<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">g.ajouter</font><font color="#000000">(</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">Contributeur</font><font color="#000000">(</font><font color="#2a00ff">"c"</font><font color="#000000">,</font><font color="#990000">150</font><font color="#000000">))</font><font color="#000000">;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><br>
 					<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">assertEquals</font><font color="#000000">(</font><font color="#2a00ff">"&nbsp;nombre&nbsp;de&nbsp;Contributeurs&nbsp;???&nbsp;"</font><font color="#000000">,&nbsp;</font><font color="#990000">3</font><font color="#000000">,&nbsp;g.nombreDeCotisants</font><font color="#000000">())</font><font color="#000000">;</font><br>
 					<font color="#ffffff">&nbsp;</font><br>
-					<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">assertTrue</font><font color="#000000">(</font><font color="#2a00ff">"&nbsp;solde&nbsp;erroné&nbsp;???&nbsp;"</font><font color="#000000">,&nbsp;g.solde</font><font color="#000000">()</font><font color="#000000">==</font><font color="#990000">300</font><font color="#000000">)</font><font color="#000000">;</font><br>
+					<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">assertTrue</font><font color="#000000">(</font><font color="#2a00ff">"&nbsp;solde&nbsp;erronÃ©&nbsp;???&nbsp;"</font><font color="#000000">,&nbsp;g.solde</font><font color="#000000">()</font><font color="#000000">==</font><font color="#990000">300</font><font color="#000000">)</font><font color="#000000">;</font><br>
 					<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>int&nbsp;</b></font><font color="#000000">ancienSolde&nbsp;=&nbsp;g.solde</font><font color="#000000">()</font><font color="#000000">;</font><br>
 					<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">AbstractTransaction&nbsp;transaction&nbsp;=&nbsp;</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">TransactionDebit</font><font color="#000000">(</font><font color="#000000">g</font><font color="#000000">)</font><font color="#000000">;</font><br>
 					<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>try</b></font><font color="#000000">{</font><br>
@@ -432,14 +432,14 @@ au sein d'une transaction, la classe abstraite <b><i>AbstractTransaction</i></b>
 			</div>
 			
             <div class="paragraphe">
-				Proposer une mise en oeuvre de la transaction, la classe concrète nommée <i><b>TransactionDebit</b></i>. 
-                celle-ci utilise un Memento, les transactions pouvant être 
-                imbriquées, le gardien devra gérer une pile de Memento. </div>
+				Proposer une mise en oeuvre de la transaction, la classe concrÃ¨te nommÃ©e <i><b>TransactionDebit</b></i>. 
+                celle-ci utilise un Memento, les transactions pouvant Ãªtre 
+                imbriquÃ©es, le gardien devra gÃ©rer une pile de Memento. </div>
 			<br>
              <div class="notes">
 Note : Un usage du patron Memento, d&#8217;un premier visiteur pour la
 sauvegarde et d&#8217;un second pour la restitution du composite,
-représentent une solution possible. </div>
+reprÃ©sentent une solution possible. </div>
 
 			<br>
 			<hr>
@@ -451,7 +451,7 @@ représentent une solution possible. </div>
             </div>
 			
             <div class="paragraphe">
-				Soit l&#8217;interface graphique suivante, à l&#8217;initialisation  :
+				Soit l&#8217;interface graphique suivante, Ã  l&#8217;initialisation  :
 			</div>
 			
             <p align="center">
@@ -459,20 +459,20 @@ représentent une solution possible. </div>
             </p>
 			
             <div class="paragraphe">
-				Un débit engendre un nouvel affichage de l'arbre XML, ci-dessous une copie d'écran après un débit de 40.			
+				Un dÃ©bit engendre un nouvel affichage de l'arbre XML, ci-dessous une copie d'Ã©cran aprÃ¨s un dÃ©bit de 40.			
 			</div>
             <p align="center">
                 <img class="win_screenshot" src="images/screenshot2.jpg" height="235" width="597">
             </p>
 
             <div class="paragraphe"><span style="font-weight: bold;">
-				Une nouvelle tentative de débit n'a aucun effet sur l'affichage, la  transaction ayant échouée.</span>
+				Une nouvelle tentative de dÃ©bit n'a aucun effet sur l'affichage, la  transaction ayant Ã©chouÃ©e.</span>
 			</div>
 			<br>
             <div class="paragraphe">
-Ci-dessous, l&#8217;implémentation à compléter de cette interface graphique :
-à chaque clic sur l'un des boutons, l'opération associée est effectuée,
-et la zone de texte <i><b>resultat</b></i> est actualisée.
+Ci-dessous, l&#8217;implÃ©mentation Ã  complÃ©ter de cette interface graphique :
+Ã  chaque clic sur l'un des boutons, l'opÃ©ration associÃ©e est effectuÃ©e,
+et la zone de texte <i><b>resultat</b></i> est actualisÃ©e.
 			</div>
  
             <div class="codesource">
@@ -480,8 +480,8 @@ et la zone de texte <i><b>resultat</b></i> est actualisée.
 					<font color="#7f0055"><b>public&nbsp;class&nbsp;</b></font><font color="#000000">IHM&nbsp;</font><font color="#7f0055"><b>extends&nbsp;</b></font><font color="#000000">JFrame&nbsp;</font><font color="#000000">{</font><br>
 					<font color="#ffffff"></font><br>
 					<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>private&nbsp;</b></font><font color="#000000">JTextArea&nbsp;resultat&nbsp;=&nbsp;</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">JTextArea</font><font color="#000000">(</font><font color="#2a00ff">""</font><font color="#000000">,&nbsp;</font><font color="#990000">7</font><font color="#000000">,</font><font color="#990000">60</font><font color="#000000">)</font><font color="#000000">;</font><br>
-					<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>private&nbsp;</b></font><font color="#000000">JButton&nbsp;debiter&nbsp;=&nbsp;</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">JButton</font><font color="#000000">(</font><font color="#2a00ff">"débiter"</font><font color="#000000">)</font><font color="#000000">;</font><br>
-					<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>private&nbsp;</b></font><font color="#000000">JButton&nbsp;crediter&nbsp;=&nbsp;</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">JButton</font><font color="#000000">(</font><font color="#2a00ff">"créditer"</font><font color="#000000">)</font><font color="#000000">;</font><br>
+					<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>private&nbsp;</b></font><font color="#000000">JButton&nbsp;debiter&nbsp;=&nbsp;</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">JButton</font><font color="#000000">(</font><font color="#2a00ff">"dÃ©biter"</font><font color="#000000">)</font><font color="#000000">;</font><br>
+					<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>private&nbsp;</b></font><font color="#000000">JButton&nbsp;crediter&nbsp;=&nbsp;</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">JButton</font><font color="#000000">(</font><font color="#2a00ff">"crÃ©diter"</font><font color="#000000">)</font><font color="#000000">;</font><br>
 					<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>private&nbsp;</b></font><font color="#000000">JTextField&nbsp;somme&nbsp;=&nbsp;</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">JTextField</font><font color="#000000">(</font><font color="#990000">4</font><font color="#000000">)</font><font color="#000000">;</font><br>
 					<font color="#ffffff"></font><br>
 					<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>private&nbsp;</b></font><font color="#000000">GroupeDeContributeurs&nbsp;g;</font><br>
@@ -493,7 +493,8 @@ et la zone de texte <i><b>resultat</b></i> est actualisée.
 					<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">container.setLayout</font><font color="#000000">(</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">BorderLayout</font><font color="#000000">())</font><font color="#000000">;</font><br>
 					<font color="#ffffff"></font><br>
 					<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">container.add</font><font color="#000000">(</font><font color="#000000">resultat,&nbsp;BorderLayout.NORTH</font><font color="#000000">)</font><font color="#000000">;</font><br>
-					<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">JPanel&nbsp;p&nbsp;=&nbsp;</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">JPanel</font><font color="#000000">(</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">FlowLayout</font><font color="#000000">())</font><font color="#000000">;</font><br>
+					<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">JPanel&nbsp;p&nbsp;=&nbsp;</font><font color=><br>
+					<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">JPanel&nbsp;p&nbsp;=&nbsp;</font><font color=#000000">FlowLayout</font><font color="#000000">())</font><font color="#000000">;</font><br>
 					<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">p.add</font><font color="#000000">(</font><font color="#000000">somme</font><font color="#000000">)</font><font color="#000000">;</font><br>
 					<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">p.add</font><font color="#000000">(</font><font color="#000000">debiter</font><font color="#000000">)</font><font color="#000000">;</font><br>
 					<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">p.add</font><font color="#000000">(</font><font color="#000000">crediter</font><font color="#000000">)</font><font color="#000000">;</font><br>
@@ -529,7 +530,7 @@ et la zone de texte <i><b>resultat</b></i> est actualisée.
 			</div>
  
             <div class="paragraphe">
-				Compléter <b><i>l&#8217;implémentation de la classe IHM</i></b> afin de produire le fonctionnement décrit ci-dessus. 
+				ComplÃ©ter <b><i>l&#8217;implÃ©mentation de la classe IHM</i></b> afin de produire le fonctionnement dÃ©crit ci-dessus. 
 			</div>
 			
 			<br>
