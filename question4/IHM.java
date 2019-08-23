@@ -6,6 +6,7 @@ import question2.*;
 import question3.*;
 import static question2.Main.*;
 
+
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
@@ -16,8 +17,8 @@ import java.io.ByteArrayOutputStream;
 public class IHM extends JFrame {
 
     private JTextArea resultat = new JTextArea("", 7,60);
-    private JButton debiter = new JButton("dÃ©biter");
-    private JButton crediter = new JButton("crÃ©diter");
+    private JButton debiter = new JButton("débiter");
+    private JButton crediter = new JButton("créditer");
     private JTextField somme = new JTextField(4);
 
     private GroupeDeContributeurs g;
@@ -48,8 +49,25 @@ public class IHM extends JFrame {
             resultat.setText(Main.arbreXML(g)); //actualiser();
         }catch(Exception e){}
 
-        debiter.addActionListener(null/* a completer */);
-        crediter.addActionListener(null/* a completer */);
+        debiter.addActionListener( new ActionListener(){ 
+                public void actionPerformed(ActionEvent ae){                             
+                AbstractTransaction transaction = new TransactionDebit(g); 
+                try{                             
+                  transaction.debit(Integer.parseInt(somme.getText())); 
+                 }catch(Exception e){} 
+                 try{                             
+                     resultat.setText(Main.arbreXML(g)); 
+                }catch(Exception e){} 
+                } 
+            });
+         crediter.addActionListener( new ActionListener(){
+                       public void actionPerformed(ActionEvent ae){                             
+            AbstractTransaction transaction = new TransactionDebit(g);                            
+            transaction.credit(Integer.parseInt(somme.getText())); 
+         try{                             
+             resultat.setText(Main.arbreXML(g)); 
+               }catch(Exception e){} } 
+            });
 
             
         this.pack();

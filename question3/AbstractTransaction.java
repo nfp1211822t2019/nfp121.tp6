@@ -25,5 +25,13 @@ public abstract class AbstractTransaction{
             throw e;
         }
     }
+    final public void credit(int somme) {
+
+            beginTransaction();
+            this.somme=somme;
+            cotisant.credit(somme);
+            endTransaction();
+        
+    }
     
 }
